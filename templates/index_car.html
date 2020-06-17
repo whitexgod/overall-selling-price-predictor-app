@@ -24,7 +24,7 @@
                 <option value="mobile">Mobile</option>
                 <option value="car">Car</option>
                 <option value="bike">Bike</option>
-                <option value="laptop">Laptop</option>
+                <option value="laptop">Laptop or Desktop</option>
             </select>
           <br>
           <button class="btn btn-primary btn-lg "  type="submit">Submit</button>
@@ -105,7 +105,11 @@
         </form>
       {% if label==1 %}
         <div class="content">
-            <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:40px;text-shadow: 2px 2px 5px red">You can sell your car at Rs. {{pred}}</h3>
+            {% if pred>0 %}
+                <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:40px;text-shadow: 2px 2px 5px red">You can sell your car at Rs. {{pred}}</h3>
+            {% else %}
+                <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:40px;text-shadow: 2px 2px 5px red">You can sell your car around Rs.20000 to Rs.30000</h3>
+            {% endif %}
         </div>
       {% elif label==0 %}
         <div class="content">

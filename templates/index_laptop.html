@@ -25,14 +25,107 @@
                 <option value="mobile">Mobile</option>
                 <option value="car">Car</option>
                 <option value="bike">Bike</option>
-                <option value="laptop">Laptop</option>
+                <option value="laptop">Laptop or Desktop</option>
             </select>
           <br>
           <button class="btn btn-primary btn-lg "  type="submit">Submit</button>
       </form>
   </div>
 
-    <h1 style="text-align:center;padding:15%;color:white;font-size:60px;text-shadow: 2px 2px 5px red">page under progress</h1>
+  <h1 style="text-align:center;color:white;font-size:60px"> Want to sell your Laptop?</h1><br>
+  <h2 style="text-align:center;color:white">Then let us help you with the Price!</h2>
+
+
+  <div class="col-sm-6" style="margin-top:10%;margin-left:25%">
+      <form class="form" action="/predict_laptop" method="POST" style="text-align:center;font-weight:bold;font-size:20px;color:#f2d40f">
+          <label class="product_type">Enter the Product Type :</label><br>
+            <select name="product_type" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <option value="Laptop">Laptop</option>
+                <option value="Desktop">Desktop</option>
+            </select>
+          <br>
+          <label class="brand">Enter the BRAND of your Laptop:</label><br>
+            <select name="brand" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <option value="Dell">Dell</option>
+                <option value="HP ( Hewlett-Packard)">HP ( Hewlett-Packard)</option>
+                <option value="Lenovo">Lenovo</option>
+                <option value="Apple">Apple</option>
+                <option value="Acer">Acer</option>
+                <option value="Asus">Asus</option>
+                <option value="Sony">Sony</option>
+                <option value="Toshiba">Toshiba</option>
+                <option value="Others">Others</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Compaq">Compaq</option>
+                <option value="HCL">HCL</option>
+                <option value="MSI">MSI</option>
+                <option value="Wipro">Wipro</option>
+                <option value="Fujitsu-Siemens">Fujitsu-Siemens</option>
+                <option value="LG">LG</option>
+                <option value="Microsoft">Microsoft</option>
+                <option value="WD Western Digital">WD Western Digital</option>
+                <option value="Micromax Laptab">Micromax Laptab</option>
+                <option value="Fujitsu">Fujitsu</option>
+                <option value="Alldocube">Alldocube</option>
+            </select>
+        <br>
+        <label class="ram">Enter the RAM of your Laptop:</label><br>
+            <select name="ram" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <option value="1">1 GB</option>
+                <option value="2">2 GB</option>
+                <option value="3">3 GB</option>
+                <option value="4">4 GB</option>
+                <option value="6">6 GB</option>
+                <option value="8">8 GB</option>
+                <option value="12">12 GB</option>
+            </select>
+        <br>
+        <label class="condition">Enter the condition of your laptop:</label><br>
+            <select name="condition" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <option value="Gently Used">Gently Used</option>
+                <option value="Almost Like New">Almost Like New</option>
+                <option value="Brand New">Brand New</option>
+                <option value="Heavily Used">Heavily Used</option>
+                <option value="Used">Normally Used</option>
+                <option value="Unboxed">Unboxed</option>
+                <option value="New">New </option>
+            </select>
+          <br>
+          <label class="screen">Enter the Screen Size in inch:</label><br>
+          <input type="text" name='screen' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="size..." value="" required=""><br>
+            <label class="processor">Enter the name of your Laptop Processor :</label><br>
+          <select name="processor" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                {% for i in range(83) %}
+                <option value="{{ df_laptop['prices'].iloc[i] }}">{{ df_laptop['model'].iloc[i] }}</option>
+              {% endfor %}
+          </select>
+        <br>
+          <button class="btn btn-primary btn-lg "  type="submit">Predict</button>
+      </form>
+        {% if label==1 %}
+        <div class="content" style="text-align:center;margin-top:10%">
+            {% if pred>0 %}
+                <h1 style="color:white">You can sell your {{ product_type }} at Rs. {{ pred }}</h1>
+            {% else %}
+                <h1 style="color:white">You can sell your {{ product_type }} around Rs.3000 to Rs.5000</h1>
+            {% endif %}
+        </div>
+      {% elif label==0 %}
+        <div class="content">
+            <h3 style="color:red;font-size:60px;font-weight:bold;">Please provide valid Informations</h3>
+        </div>
+      {% endif %}
+  </div>
+
+  <br><br>
+  <footer id="footer" style="text-align:center;padding:2%;margin-top:20%">
+
+    <strong style="color:white">© Copyright 2020</strong>
+      <span class="grey" style="color:white">|</span>
+      <span style="color:white">Tuhin Mukherjee</span>
+
+
+  </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

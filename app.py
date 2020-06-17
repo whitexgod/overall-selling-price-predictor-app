@@ -7,6 +7,8 @@ clf_mobile = pickle.load(open('model86%.pkl','rb'))
 df_mobile = pickle.load(open('process.pkl', 'rb'))
 clf_car = pickle.load(open('model3.pkl','rb'))
 clf_bike = pickle.load(open('model90%.pkl','rb'))
+clf_laptop = pickle.load(open('model46%.pkl','rb'))
+df_laptop = pickle.load(open('processor_laptop.pkl','rb'))
 
 app=Flask(__name__)
 
@@ -27,7 +29,7 @@ def predict():
         elif selected == 'bike':
             return render_template('index_bike.html')
         elif selected == 'laptop':
-            return render_template('index_laptop.html')
+            return render_template('index_laptop.html', df_laptop=df_laptop)
     except:
 
         return render_template('index.html')
@@ -159,6 +161,46 @@ def predict_bike():
 
         return render_template('index_bike.html', label=0)
 
+
+@app.route('/predict_laptop', methods=['POST'])
+def predict_laptop():
+    try:
+
+        product_type=request.form.get('product_type')
+        brand=request.form.get('brand')
+        ram=request.form.get('ram')
+        condition=request.form.get('condition')
+        screen=request.form.get('screen')
+        processor_cost=request.form.get('processor')
+        screen=screen.strip('inch')
+
+        new = pd.DataFrame(columns=['Ram', 'screen', 'brand_Acer', 'brand_Alldocube', 'brand_Apple',
+                                    'brand_Asus', 'brand_Compaq', 'brand_Dell', 'brand_E Machines',
+                                    'brand_Fujitsu', 'brand_Fujitsu-Siemens', 'brand_Gateway',
+                                    'brand_HCL', 'brand_HP ( Hewlett-Packard)',
+                                    'brand_High Quality Assembled Desktop with Laptop Table',
+                                    'brand_LG', 'brand_Lenovo', 'brand_MSI', 'brand_Micromax Laptab',
+                                    'brand_Microsoft', 'brand_Others', 'brand_RDP THINBOOK 1310',
+                                    'brand_Reach Rcn025', 'brand_Samsung', 'brand_Solt', 'brand_Sony',
+                                    'brand_Toshiba', 'brand_Tripod brand new',
+                                    'brand_WD Western Digital', 'brand_Wipro', 'brand_ZED LIFE',
+                                    'product_type_Desktop', 'product_type_Laptop',
+                                    'condition_Almost Like New', 'condition_Brand New',
+                                    'condition_Gently Used', 'condition_Heavily Used', 'condition_New',
+                                    'condition_Unboxed', 'condition_Used'])
+        d = {'brand': brand, 'screen': screen, 'Ram': ram, 'condition': condition, 'product_type': product_type}
+        data = pd.DataFrame(d, index=[1])
+        F = pd.get_dummies(data, columns=['brand', 'product_type', 'condition'])
+        new[F.columns.values] = F[F.columns.values]
+        new = new.replace(np.nan, 0)
+        x = new.iloc[:, :].values
+        pred = round(clf_laptop.predict(x)[0], 2)+int(processor_cost)
+
+        return render_template('index_laptop.html', df_laptop=df_laptop, pred=pred, label=1, product_type=product_type)
+
+    except:
+
+        return render_template('index_laptop.html', label=0)
 
 
 if __name__ =="__main__":
