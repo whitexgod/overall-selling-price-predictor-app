@@ -1,0 +1,91 @@
+*{
+margin:0;
+padding:0;
+}
+
+#loading{
+position:fixed;
+width:100%;
+height:100vh;
+background: #fff
+url('Eclipse.gif') no-repeat center;
+z-index:99999;
+}
+
+.navbar
+{
+width:100%;
+background: #DAD299;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body
+{
+background-image: url('https://www.itl.cat/pics/b/29/290770_background-hd-wallpapers.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+transition:20s;
+
+animation-name: animate;
+animation-direction : alternate;
+animation-duration : 120s;
+animation-fill-mode: forwards;
+animation-play-state: running;
+animation-timing-function:ease-in-out;
+}
+
+@keyframes animate{
+    0%,100{
+        background-image: url('https://newevolutiondesigns.com/images/freebies/nature-hd-background-3.jpg')
+    }
+    20%{
+        background-image: url('https://i.pinimg.com/originals/1c/96/7f/1c967f2ab4ead5f0ce003930b5cb9326.jpg')
+    }
+    40%{
+        background-image: url('https://www.itl.cat/pngfile/big/155-1554333_forest-hd-wallpapers-1080p-spooky-roads.jpg')
+    }
+    60%{
+        background-image: url('https://newevolutiondesigns.com/images/freebies/nature-hd-background-3.jpg')
+    }
+    80%{
+        background-image: url('https://images.wallpaperscraft.com/image/forest_trees_fog_110131_1920x1080.jpg')
+    }
+
+}
+
+.bg-nav{
+margin:0;
+position:absolute;
+}
+
+h1
+{
+text-align:center;
+color:red;
+text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
+}
+
+h2{
+text-align:center;
+color: #54a;
+letter-spacing: 5px;
+text-shadow: 16px 22px 11px rgba(168,158,32,0.8);
+}
+
+h3{
+text-align:center;
+color:white;
+text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
+}
+
+.form-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+
+

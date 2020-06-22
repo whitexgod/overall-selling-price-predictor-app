@@ -4,21 +4,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_car.css') }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>JSIT</title>
   </head>
-  <body class="bg-nav" style="background-image: url('https://blog.spoongraphics.co.uk/wp-content/uploads/2019/03/thumbnail-7.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;">
+  <body onload="myFunction()">
+  <div id="loading">
+
+  </div>
   <nav class="navbar navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Car Re-Selling Price Predictor</a>
   </nav><br>
-  <div class="col-sm-8" style="text-align:left;margin-top:15%;font-weight:bold;margin-left:17%">
-      <form class="form" action="/predict" method="POST" style="text-align:center;font-weight:bold;margin-bottom:10%;font-size:20px;color:#f2d40f">
+  <div class="col-sm-8 form-container">
+      <form class="form" action="/predict" method="POST" style="text-align:center;font-weight:bold;margin-bottom:10%;font-size:35px;color:#f55860">
           <label class="selected">Select what you want to sell :</label><br>
             <select name="selected" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 <option value="mobile">Mobile</option>
@@ -31,12 +31,11 @@
       </form>
   </div>
 
-<h3 style="font-size:20px;color:white;text-align:center;text-shadow: 2px 2px 5px red">Want to sell your car but confused about the price?</h3><br>
-  <h2 style="text-align:center;font-weight:bold">Don't worry, you are in the right place!</h2>
-  <hr style="border-style: none;border-top-style: dotted;border-color: grey;border-width: 5px;width: 5%;padding: 5%">
+<h3 style="font-size:30px;color:white;text-align:center;text-shadow: 2px 2px 5px red">Want to sell your car but confused about the price?</h3><br>
+  <h2 style="text-align:center;font-weight:bold;font-size:50px;text-shadow: 2px 2px #ff0000;">Don't worry, you are in the right place!</h2>
 
-  <div class="col-sm-8" style="text-align:center;margin-left:16%">
-        <form class="form" action="/predict_car" method="POST" style="text-align:center;font-weight:bold;font-size:20px;color:#f2d40f">
+  <div class="col-sm-8 form2-container">
+        <form class="form" action="/predict_car" method="POST" style="text-align:center;font-weight:bold;font-size:25px;color:#f2d40f">
             <label class="model_name">Car Model:</label><br>
             <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="model_name" placeholder="Model..."><br>
             <label class="company">Enter the company of your car:</label><br>
@@ -126,6 +125,15 @@
 
 
   </footer>
+
+  <script>
+
+        var preloader = document.getElementById('loading');
+        function myFunction(){
+        preloader.style.display='none';
+         }
+
+  </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

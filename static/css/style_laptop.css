@@ -1,0 +1,75 @@
+*{
+margin:0;
+padding:0;
+}
+
+#loading{
+position:fixed;
+width:100%;
+height:100vh;
+background: #fff
+url('Eclipse.gif') no-repeat center;
+z-index:99999;
+}
+
+.navbar
+{
+width:100%;
+background: #DAD299;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-container
+{
+font-weight:bold;
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+
+.form2-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+text-align:center;
+}
+
+body
+{
+background-image: url('https://cnet4.cbsistatic.com/img/mGwZGcLHmYQ_HhVcXdimOUBTW8g=/2019/03/19/1f008531-a7e2-4f29-a9c2-91b15b3f71d3/dellxps13-still1.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+transition:10s;
+
+animation-name: animate;
+animation-direction : alternate;
+animation-duration : 60s;
+animation-fill-mode: forwards;
+animation-play-state: running;
+animation-timing-function:ease-in-out;
+}
+
+@keyframes animate{
+    0%,100{
+        background-image: url('https://www.setaswall.com/wp-content/uploads/2017/03/Keyboard-Laptop-Macro-Wallpaper-1920x1080.jpg')
+    }
+    20%{
+        background-image: url('https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg')
+    }
+    40%{
+        background-image: url('https://images.wallpapersden.com/image/download/macbook-apple-laptop_22795_1920x1080.jpg')
+    }
+    60%{
+        background-image: url('https://www.setaswall.com/wp-content/uploads/2017/03/Keyboard-Laptop-Macro-Wallpaper-1920x1080.jpg')
+    }
+    80%{
+        background-image: url('https://wallpapershome.com/images/wallpapers/microsoft-surface-laptop-1920x1080-best-laptops-review-13462.jpg')
+    }
+}

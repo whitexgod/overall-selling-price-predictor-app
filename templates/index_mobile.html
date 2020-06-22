@@ -4,21 +4,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_mobile.css') }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>JSIT</title>
   </head>
-  <body style="background-image: url('https://motorolaus.vtexassets.com/assets/vtex.file-manager-graphql/images/mot-direct-homepage-moto-G-fast-d___c0965f7cf8df47d4d164eb5328b7c33a.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;">
+  <body onload="myFunction()">
+  <div id="loading">
+
+  </div>
   <nav class="navbar navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Re-Selling Price Predictor</a>
   </nav><br>
-  <div class="col-sm-8" style="text-align:left;margin-top:15%;font-weight:bold;margin-left:17%">
-      <form class="form" action="/predict" method="POST" style="text-align:center;font-weight:bold;margin-bottom:10%;font-size:20px;color:#f2d40f">
+  <div class="col-sm-8 form-container">
+      <form class="form" action="/predict" method="POST" style="text-align:center;font-weight:bold;margin-bottom:10%;font-size:35px;color:#f55860">
           <label class="selected">Select what you want to sell :</label><br>
             <select name="selected" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 <option value="mobile">Mobile</option>
@@ -31,15 +31,13 @@
       </form>
   </div>
 
-<h1 style="margin-top:5%;margin-left:10%;color:white;font-size:60px;text-shadow: 2px 2px 5px red">Bored up with your old phone?</h1>
-  <h2 style="margin-left:2%;color:white;font-size:30px">Don't worry! we will tell you how much re-sell price you can expect from it.</h2><br><br>
-  <h3 style="margin-left:2%;color:white;font-size:30px">You just need to give us some details of your old phone</h3>
+<h1 style="text-align:center;color:white;font-size:60px;text-shadow: 2px 2px 5px red">Bored up with your old phone?</h1><br>
+  <h2 style="text-align:center;color:white;font-size:30px;text-shadow: 2px 2px 5px red">Don't worry! we will tell you how much re-sell price you can expect from it.</h2><br><br>
+  <h3 style="text-align:center;color:white;font-size:30px;text-shadow: 2px 2px 5px red">You just need to give us some details of your old phone</h3>
 
 
-
-
-   <div class="col-sm-6" style="margin-top:10%;margin-left:7%">
-      <form class="form" action="/predict_mobile" method="POST" style="text-align:center;font-weight:bold;font-size:20px;color:#f2d40f">
+   <div class="col-sm-6 form2-container">
+      <form class="form" action="/predict_mobile" method="POST" style="text-align:center;font-weight:bold;font-size:25px;color:#f2d40f">
           <label class="brand">Enter the BRAND of your Mobile:</label><br>
             <select name="brand" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 <option value="Apple">Apple</option>
@@ -101,7 +99,7 @@
         <br>
           <button class="btn btn-primary btn-lg "  type="submit">Predict</button>
       </form>
-<br><br><br><br><br>
+<br><br><br><br>
       {% if label==1 %}
         <div class="content" style="text-align:center">
             {% if pred>0 %}
@@ -125,8 +123,8 @@
 
 
 
-  <br><br>
-  <footer id="footer" style="text-align:center;padding:2%;margin-top:20%">
+  <br>
+  <footer id="footer" style="text-align:center;padding:2%;margin-top:15%">
 
     <strong style="color:white">© Copyright 2020</strong>
       <span class="grey" style="color:white">|</span>
@@ -134,6 +132,15 @@
 
 
   </footer>
+  <script>
+
+        var preloader = document.getElementById('loading');
+        function myFunction(){
+        preloader.style.display='none';
+         }
+
+  </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

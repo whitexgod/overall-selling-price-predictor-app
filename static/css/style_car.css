@@ -1,0 +1,74 @@
+*{
+margin:0;
+padding:0;
+}
+
+#loading{
+position:fixed;
+width:100%;
+height:100vh;
+background: #fff
+url('Eclipse.gif') no-repeat center;
+z-index:99999;
+}
+
+.navbar
+{
+width:100%;
+background: #DAD299;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body
+{
+background-image: url('https://images.hdqwalls.com/download/ferrari-laferrari-aperta-pa-1920x1080.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+transition:10s;
+
+animation-name: animate;
+animation-direction : alternate;
+animation-duration : 60s;
+animation-fill-mode: forwards;
+animation-play-state: running;
+animation-timing-function:ease-in-out;
+}
+
+@keyframes animate{
+    0%,100{
+        background-image: url('https://thewallpaper.co/wp-content/uploads/2016/10/Full-HD-Backgrounds-1080p-Cars-Desktop-desktop-images-windows-10-backgrounds-amazing-4k-hi-res-quality-images-computer-wallpapers-colours-1920x1080.jpg')
+    }
+    20%{
+        background-image: url('https://wallpapercart.com/wp-content/uploads/2019/04/HD-Car-Wallpapers-HD-Supercar-Wallpapers-1920x1080.jpg')
+    }
+    40%{
+        background-image: url('https://s2.best-wallpaper.net/wallpaper/1920x1080/1803/Ferrari-blue-car-side-view-sports-car_1920x1080.jpg')
+    }
+    60%{
+        background-image: url('https://www.technocrazed.com/wp-content/uploads/2015/12/Audi-Wallpaper-35.jpg')
+    }
+    80%{
+        background-image: url('https://i.pinimg.com/originals/e1/8e/2a/e18e2a78770ef03571053311d5783bad.jpg')
+    }
+}
+
+.form-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+
+.form2-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+text-align:center;
+}
