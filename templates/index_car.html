@@ -17,6 +17,7 @@
   </div>
   <nav class="navbar navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Car Re-Selling Price Predictor</a>
+      <a href="https://selling-price-predictor.herokuapp.com">Home</a>
   </nav><br>
   <div class="col-sm-8 form-container">
       <form class="form" action="/predict" method="POST" style="text-align:center;font-weight:bold;margin-bottom:10%;font-size:35px;color:#f55860">
@@ -104,6 +105,9 @@
             <button class="btn btn-primary btn-lg "  type="submit">Predict</button>
         </form>
       {% if label==1 %}
+      <script>
+                alert('The Generated information is shown at the bottom of the page');
+            </script>
         <div class="content">
             {% if pred>0 %}
                 <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:40px;text-shadow: 2px 2px 5px red">You can sell your car at Rs. {{pred}}</h3>
@@ -112,6 +116,9 @@
             {% endif %}
         </div>
       {% elif label==0 %}
+      <script>
+                alert('Please provide valid information');
+            </script>
         <div class="content">
             <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:30px">Please provide valid informations</h3>
         </div>

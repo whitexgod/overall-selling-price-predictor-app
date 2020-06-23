@@ -18,6 +18,7 @@
   </div>
   <nav class="navbar navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Bike re-selling Price Predictor</a>
+      <a href="https://selling-price-predictor.herokuapp.com">Home</a>
   </nav><br>
 
   <div class="col-sm-8 form-container">
@@ -107,6 +108,9 @@
         </form>
   </div>
       {% if label==1 %}
+  <script>
+                alert('The Generated information is shown at the bottom of the page');
+            </script>
         <div class="content" style="margin-left:30%;margin-top:5%">
             {% if pred>0 %}
                 <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:40px;text-shadow: 2px 2px 5px red">You can sell your Bike at Rs. {{pred}}</h3>
@@ -115,6 +119,9 @@
             {% endif %}
         </div>
       {% elif label==0 %}
+  <script>
+                alert('Please provide valid information');
+            </script>
         <div class="content">
             <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:30px">Please provide valid informations</h3>
         </div>
