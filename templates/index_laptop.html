@@ -21,7 +21,7 @@
   </nav><br>><br>
 
   <div class="col-sm-8 form-container">
-      <form class="form" action="/predict" method="POST" style="text-align:center;font-weight:bold;margin-bottom:10%;font-size:35px;color:#f55860">
+      <form class="form form1" action="/predict" method="POST" style="">
           <label class="selected">Select what you want to sell :</label><br>
             <select name="selected" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 <option value="mobile">Mobile</option>
@@ -34,12 +34,12 @@
       </form>
   </div>
 
-  <h1 style="text-align:center;color:white;font-size:60px"> Want to sell your Laptop?</h1><br>
-  <h2 style="text-align:center;color:white">Then let us help you with the Price!</h2>
+  <h1 class="laptop-h1" style=""> Want to sell your Laptop?</h1><br>
+  <h2 class="laptop-h2" style="">Then let us help you with the Price!</h2>
 
 
   <div class="col-sm-6 form2-container" style="margin-top:10%">
-      <form class="form" action="/predict_laptop" method="POST" style="text-align:center;font-weight:bold;font-size:25px;color:#f2d40f">
+      <form class="form form2" action="/predict_laptop" method="POST" style="">
           <label class="product_type">Enter the Product Type :</label><br>
             <select name="product_type" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 <option value="Laptop">Laptop</option>
@@ -120,7 +120,7 @@
                 alert('Please provide valid information');
             </script>
         <div class="content">
-            <h3 style="color:red;font-size:60px;font-weight:bold;">Please provide valid Informations</h3>
+            <h3 style="color:red;font-size:50px;font-weight:bold;">Please provide valid Informations</h3>
         </div>
       {% endif %}
   </div>

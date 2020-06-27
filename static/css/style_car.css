@@ -15,9 +15,21 @@ z-index:99999;
 .navbar
 {
 width:100%;
-background: #DAD299;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(-45deg, #EE7751, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
 }
 
 body
@@ -53,7 +65,18 @@ animation-timing-function:ease-in-out;
         background-image: url('https://i.pinimg.com/originals/e1/8e/2a/e18e2a78770ef03571053311d5783bad.jpg')
     }
 }
-
+.car-h2{
+text-align:center;font-weight:bold;font-size:50px;text-shadow: 2px 2px #ff0000;
+}
+.car-h3{
+font-size:30px;color:white;text-align:center;text-shadow: 2px 2px 5px red;
+}
+.form2{
+text-align:center;font-weight:bold;font-size:25px;color:white;
+}
+.form1{
+text-align:center;font-weight:bold;margin-bottom:10%;font-size:35px;color:#f55860;
+}
 .form-container
 {
 margin: auto;
@@ -71,4 +94,103 @@ width: 50%;
 padding: 10px;
 font-weight:bold;
 text-align:center;
+}
+
+@media screen and (max-width: 500px) and (min-width: 200px){
+.car-h2{
+text-align:center;font-weight:bold;font-size:20px;text-shadow: 2px 2px #ff0000;
+}
+.car-h3{
+font-size:20px;color:white;text-align:center;text-shadow: 2px 2px 5px red;
+}
+.form2{
+text-align:center;font-weight:bold;font-size:15px;color:white;
+}
+.form1{
+text-align:center;font-weight:bold;margin-bottom:10%;font-size:15px;color:#f55860;
+}
+.form-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+
+.form2-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+text-align:center;
+}
+}
+
+@media screen and (max-width: 800px) and (min-width: 500px){
+.car-h2{
+text-align:center;font-weight:bold;font-size:30px;text-shadow: 2px 2px #ff0000;
+}
+.car-h3{
+font-size:30px;color:white;text-align:center;text-shadow: 2px 2px 5px red;
+}
+.form2{
+text-align:center;font-weight:bold;font-size:25px;color:white;
+}
+.form1{
+text-align:center;font-weight:bold;margin-bottom:10%;font-size:25px;color:#f55860;
+}
+.form-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+
+.form2-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+text-align:center;
+}
+}
+
+@media screen and (max-width: 1050px) and (min-width: 800px){
+.car-h2{
+text-align:center;font-weight:bold;font-size:40px;text-shadow: 2px 2px #ff0000;
+}
+.car-h3{
+font-size:40px;color:white;text-align:center;text-shadow: 2px 2px 5px red;
+}
+.form2{
+text-align:center;font-weight:bold;font-size:30px;color:white;
+}
+.form1{
+text-align:center;font-weight:bold;margin-bottom:10%;font-size:30px;color:#f55860;
+}
+.form-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+
+.form2-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+text-align:center;
+}
 }

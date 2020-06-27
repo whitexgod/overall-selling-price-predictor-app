@@ -20,7 +20,7 @@
       <a href="https://selling-price-predictor.herokuapp.com">Home</a>
   </nav><br>
   <div class="col-sm-8 form-container">
-      <form class="form" action="/predict" method="POST" style="text-align:center;font-weight:bold;margin-bottom:10%;font-size:35px;color:#f55860">
+      <form class="form form1" action="/predict" method="POST" style="">
           <label class="selected">Select what you want to sell :</label><br>
             <select name="selected" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 <option value="mobile">Mobile</option>
@@ -33,13 +33,13 @@
       </form>
   </div>
 
-<h1 style="text-align:center;color:white;font-size:60px;text-shadow: 2px 2px 5px red">Bored up with your old phone?</h1><br>
-  <h2 style="text-align:center;color:white;font-size:30px;text-shadow: 2px 2px 5px red">Don't worry! we will tell you how much re-sell price you can expect from it.</h2><br><br>
-  <h3 style="text-align:center;color:white;font-size:30px;text-shadow: 2px 2px 5px red">You just need to give us some details of your old phone</h3>
+<h1 class="mobile-h1" style="">Bored up with your old phone?</h1><br>
+  <h2 class="mobile-h2" style="">Don't worry! we will tell you how much re-sell price you can expect from it.</h2><br><br>
+  <h3 class="mobile-h3" style="">You just need to give us some details of your old phone</h3>
 
 
    <div class="col-sm-6 form2-container">
-      <form class="form" action="/predict_mobile" method="POST" style="text-align:center;font-weight:bold;font-size:25px;color:#f2d40f">
+      <form class="form form2" action="/predict_mobile" method="POST" style="">
           <label class="brand">Enter the BRAND of your Mobile:</label><br>
             <select name="brand" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 <option value="Apple">Apple</option>

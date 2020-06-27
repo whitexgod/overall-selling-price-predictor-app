@@ -20,7 +20,7 @@
       <a href="https://selling-price-predictor.herokuapp.com">Home</a>
   </nav><br>
   <div class="col-sm-8 form-container">
-      <form class="form" action="/predict" method="POST" style="text-align:center;font-weight:bold;margin-bottom:10%;font-size:35px;color:#f55860">
+      <form class="form form1" action="/predict" method="POST" style="">
           <label class="selected">Select what you want to sell :</label><br>
             <select name="selected" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 <option value="mobile">Mobile</option>
@@ -33,11 +33,11 @@
       </form>
   </div>
 
-<h3 style="font-size:30px;color:white;text-align:center;text-shadow: 2px 2px 5px red">Want to sell your car but confused about the price?</h3><br>
-  <h2 style="text-align:center;font-weight:bold;font-size:50px;text-shadow: 2px 2px #ff0000;">Don't worry, you are in the right place!</h2>
+<h3 class="car-h3" style="">Want to sell your car but confused about the price?</h3><br>
+  <h2 class="car-h2" style="">Don't worry, you are in the right place!</h2>
 
   <div class="col-sm-8 form2-container">
-        <form class="form" action="/predict_car" method="POST" style="text-align:center;font-weight:bold;font-size:25px;color:#f2d40f">
+        <form class="form form2" action="/predict_car" method="POST" style="">
             <label class="model_name">Car Model:</label><br>
             <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="model_name" placeholder="Model..."><br>
             <label class="company">Enter the company of your car:</label><br>
@@ -110,7 +110,7 @@
             </script>
         <div class="content">
             {% if pred>0 %}
-                <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:40px;text-shadow: 2px 2px 5px red">You can sell your car at Rs. {{pred}}</h3>
+                <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:30px;text-shadow: 2px 2px 5px red">You can sell your car at Rs. {{pred}}</h3>
             {% else %}
                 <h3 style="margin-top:5%;color:#e8a30e;font-weight:bold;font-size:40px;text-shadow: 2px 2px 5px red">You can sell your car around Rs.20000 to Rs.30000</h3>
             {% endif %}

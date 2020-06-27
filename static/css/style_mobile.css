@@ -15,9 +15,21 @@ z-index:99999;
 .navbar
 {
 width:100%;
-background: #DAD299;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(-45deg, #EE7751, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
 }
 
 .form-container
@@ -29,7 +41,12 @@ width: 50%;
 padding: 10px;
 font-weight:bold;
 }
-
+.form1{
+text-align:center;font-weight:bold;margin-bottom:10%;font-size:35px;color:#f55860;
+}
+.form2{
+text-align:center;font-weight:bold;font-size:25px;color:#f2d40f;
+}
 .form2-container
 {
 margin: auto;
@@ -39,7 +56,15 @@ padding: 10px;
 font-weight:bold;
 text-align:center;
 }
-
+.mobile-h1{
+text-align:center;color:white;font-size:60px;text-shadow: 2px 2px 5px red;
+}
+.mobile-h2{
+text-align:center;color:white;font-size:30px;text-shadow: 2px 2px 5px red;
+}
+.mobile-h3{
+text-align:center;color:white;font-size:30px;text-shadow: 2px 2px 5px red;
+}
 body
 {
 background-image: url('https://wallpaperplay.com/walls/full/0/e/e/216037.jpg');
@@ -72,4 +97,116 @@ animation-timing-function:ease-in-out;
     80%{
         background-image: url('https://cdn57.androidauthority.net/wp-content/uploads/2019/07/OnePlus-7-and-Xiaomi-Mi-9-and-Asus-Zenfone-6-displays.jpg')
     }
+}
+
+
+@media screen and (max-width: 500px) and (min-width: 200px)
+{
+.form-container
+{
+font-weight:bold;
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+.form1{
+text-align:center;font-weight:bold;margin-bottom:10%;font-size:20px;color:#f55860;
+}
+.form2{
+text-align:center;font-weight:bold;font-size:15px;color:#f2d40f;
+}
+.form2-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+text-align:center;
+}
+.mobile-h1{
+text-align:center;color:white;font-size:30px;text-shadow: 2px 2px 5px red;
+}
+.mobile-h2{
+text-align:center;color:white;font-size:15px;text-shadow: 2px 2px 5px red;
+}
+.mobile-h3{
+text-align:center;color:white;font-size:15px;text-shadow: 2px 2px 5px red;
+}
+}
+
+@media screen and (max-width: 800px) and (min-width: 500px)
+{
+.form-container
+{
+font-weight:bold;
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+.form1{
+text-align:center;font-weight:bold;margin-bottom:10%;font-size:30px;color:#f55860;
+}
+.form2{
+text-align:center;font-weight:bold;font-size:25px;color:#f2d40f;
+}
+.form2-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+text-align:center;
+}
+.mobile-h1{
+text-align:center;color:white;font-size:40px;text-shadow: 2px 2px 5px red;
+}
+.mobile-h2{
+text-align:center;color:white;font-size:25px;text-shadow: 2px 2px 5px red;
+}
+.mobile-h3{
+text-align:center;color:white;font-size:25px;text-shadow: 2px 2px 5px red;
+}
+}
+
+@media screen and (max-width: 1050px) and (min-width: 800px)
+{
+.form-container
+{
+font-weight:bold;
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+}
+.form1{
+text-align:center;font-weight:bold;margin-bottom:10%;font-size:50px;color:#f55860;
+}
+.form2{
+text-align:center;font-weight:bold;font-size:35px;color:#f2d40f;
+}
+.form2-container
+{
+margin: auto;
+margin-top:10%;
+width: 50%;
+padding: 10px;
+font-weight:bold;
+text-align:center;
+}
+.mobile-h1{
+text-align:center;color:white;font-size:50px;text-shadow: 2px 2px 5px red;
+}
+.mobile-h2{
+text-align:center;color:white;font-size:35px;text-shadow: 2px 2px 5px red;
+}
+.mobile-h3{
+text-align:center;color:white;font-size:35px;text-shadow: 2px 2px 5px red;
+}
 }
